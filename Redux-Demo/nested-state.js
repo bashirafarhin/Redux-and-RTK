@@ -22,7 +22,7 @@ const reducer = (state = initialState, action) => {
         //   return {
         //     ...state,
         //     address: {
-        //       ...state.address,
+        //       ...state.address, 
         //       street: action.payload
         //     }
         //   }
@@ -31,7 +31,7 @@ const reducer = (state = initialState, action) => {
         // package, it takes current state and it has a function which receives a draft copy of the state and
         // behind the scenes it works in the same manner as above
         return produce(state,(draft)=>{
-            draft.address.address=action.payload
+            draft.address.street=action.payload
         })
       default: {
         return state
